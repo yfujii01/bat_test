@@ -1,18 +1,18 @@
 @setlocal enabledelayedexpansion
 @echo OFF
 
-REM ˆêƒtƒ@ƒCƒ‹‰Šú‰»
+REM ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«åˆæœŸåŒ–
 echo.> tmp.txt
 
-REM ƒtƒ@ƒCƒ‹ˆê——“Ç
-REM ƒL[€–Ú‚ğæ“ª‚É•t—^‚µ‚Äˆêƒtƒ@ƒCƒ‹‚Éo—Í
+REM ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§èª­è¾¼
+REM ã‚­ãƒ¼é …ç›®ã‚’å…ˆé ­ã«ä»˜ä¸ã—ã¦ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›
 for /F %%a in ('dir /b files\*') do (
-  set tmp=%%a
-  echo !tmp:~3,2!-!tmp:~0,2!-!tmp!>>tmp.txt
+  set tmp1=%%a
+  echo !tmp1:~3,2!-!tmp1:~0,2!-!tmp1!>>tmp.txt
 )
 
-REM ˆêƒtƒ@ƒCƒ‹‚ğ“ÇAƒ\[ƒg‚µ‚Äo—Í
+REM ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­è¾¼ã€ã‚½ãƒ¼ãƒˆã—ã¦å‡ºåŠ›
 for /F %%a in ('C:\Windows\System32\sort tmp.txt') do (
-  set tmp=%%a
-  echo !tmp:~6!
+  set tmp2=%%a
+  echo !tmp2:~6!
 )
